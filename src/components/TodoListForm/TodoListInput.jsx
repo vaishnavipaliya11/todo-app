@@ -1,7 +1,11 @@
+import {v4 as uuid} from "uuid"
+import { DisplayTodo } from "../displayTodo/DisplayTodo";
+
 const TodoListForm = ({ userInput, setUserInput, todo, setTodo }) => {
-  const addToDo = () => {
+  const addToDo = (e) => {
     e.preventDefault();
-   
+   setTodo([...todo, {id:uuid(), title:userInput, isComplete:false}])
+   setUserInput("")
   };
   return (
     <div>
@@ -14,7 +18,10 @@ const TodoListForm = ({ userInput, setUserInput, todo, setTodo }) => {
         <button type="submit" onClick={(e) => addToDo(e)}>
           Add
         </button>
+
+
       </form>
+     
     </div>
   );
 };
