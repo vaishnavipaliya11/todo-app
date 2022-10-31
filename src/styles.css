@@ -1,0 +1,18 @@
+:root{
+    --primary-clr:#38bdf8;
+    --text-clr:#f0f9ff;
+    --secondary-clr:#0ea5e9;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.todo-list-container {
+  width: 30%;
+  background: #ffffff;
+  border: 1px solid #f7f7f7;
+  box-shadow: 24px 36px 64px -14px rgba(77, 77, 77, 0.15);
+  border-radius: 10px;
+  margin: auto;
+}

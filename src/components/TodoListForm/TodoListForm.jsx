@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
-
+import {IoIosAdd} from "react-icons/io"
+import "../index.css"
 const TodoListForm = ({
   userInput,
   setUserInput,
@@ -42,11 +43,12 @@ const TodoListForm = ({
     <div>
       <form onSubmit={addToDo}>
         <input
+        className="user-input"
           placeholder="enter to-do item"
           required
           onChange={(e) => setUserInput(e.target.value)}
         />
-        <button type="submit">{editTodo? "edit" :"ADD"}</button>
+        <button className="add-btn" type="submit">{editTodo? "edit" :"Add"}</button>
       </form>
     </div>
   );
