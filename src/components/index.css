@@ -5,7 +5,7 @@
     border-radius: 5px;
     border: 1px solid blue;
     margin: 0.5rem;
-    max-width: 14rem;
+    width: 14rem;
 }
 .user-input:focus{
     outline: 2px solid var(--primary-clr);

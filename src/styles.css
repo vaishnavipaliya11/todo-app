@@ -29,4 +29,7 @@ body {
   .todo-list-container{
     width: 80%;
   }
+  .user-input{
+    max-width: 14rem;
+  }
 }
