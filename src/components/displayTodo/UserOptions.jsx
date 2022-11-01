@@ -4,7 +4,6 @@ import {
   IoCheckmarkDoneCircleOutline,
   IoCheckmarkDoneCircle,
 } from "react-icons/io5";
-import { TiTick } from "react-icons/ti";
 const UserOption = ({
   data,
   deleteTodo,
