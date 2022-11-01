@@ -2,6 +2,7 @@
     --primary-clr:#38bdf8;
     --text-clr:#f0f9ff;
     --secondary-clr:#0ea5e9;
+    --gray-clr:#374151;
 }
 body {
   margin: 0;
@@ -15,4 +16,17 @@ body {
   box-shadow: 24px 36px 64px -14px rgba(77, 77, 77, 0.15);
   border-radius: 10px;
   margin: auto;
+}
+.header-container{
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #334155;
+  box-shadow: 0 6px 24px 0 rgb(0 0 0 / 5%), 0 0 0 1px rgb(0 0 0 / 8%);
+}
+@media screen and (max-width:500px) {
+  .todo-list-container{
+    width: 80%;
+  }
 }

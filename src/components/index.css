@@ -5,6 +5,7 @@
     border-radius: 5px;
     border: 1px solid blue;
     margin: 0.5rem;
+    max-width: 14rem;
 }
 .user-input:focus{
     outline: 2px solid var(--primary-clr);
@@ -42,14 +43,11 @@ li{
     padding: 0.3rem;
     margin: 0.3rem;
     border-radius: 50%;
-    border: 1px solid #52525b;
+    border: 1px solid var(--gray-clr);
     font-size: 1rem;
-    color:#374151
+    color:var(--gray-clr)
 }
 .todo-form{
     margin: 1rem;
     padding: 0.5rem;
-}
-.todo-form input{
-    width: 14rem;
 }

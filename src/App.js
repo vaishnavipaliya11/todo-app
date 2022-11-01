@@ -8,9 +8,9 @@ function App() {
   const [editTodo, setEditTodo] = useState(null);
   return (
     <div className="App">
-      <div className="todo-list-container">
+      <div>
         <Header />
-        <div>
+        <div className="todo-list-container">
         <TodoListForm
           todo={todo}
           setTodo={setTodo}
