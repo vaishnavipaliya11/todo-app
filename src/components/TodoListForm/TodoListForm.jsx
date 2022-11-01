@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
-import {IoIosAdd} from "react-icons/io"
-import "../index.css"
+import { IoIosAdd } from "react-icons/io";
+import "../index.css";
 const TodoListForm = ({
   userInput,
   setUserInput,
@@ -28,11 +28,11 @@ const TodoListForm = ({
     setEditTodo("");
   };
 
-  const addToDo = (e) => {
+  const addToDo = (e, editTodo) => {
     e.preventDefault();
     console.log(editTodo, "edit todo");
     if (editTodo) {
-      updateToDo(userInput, editTodo.title, editTodo.id, editTodo.isComplete);
+      updateToDo(userInput, editTodo.id, editTodo.isComplete);
     } else {
       setTodo([...todo, { id: uuid(), title: userInput, isComplete: false }]);
       setUserInput("");
@@ -43,12 +43,15 @@ const TodoListForm = ({
     <div>
       <form onSubmit={addToDo}>
         <input
-        className="user-input"
+          className="user-input"
           placeholder="enter to-do item"
           required
           onChange={(e) => setUserInput(e.target.value)}
+          value={userInput}
         />
-        <button className="add-btn" type="submit">{editTodo? "edit" :"Add"}</button>
+        <button className="add-btn" type="submit">
+          Add
+        </button>
       </form>
     </div>
   );
