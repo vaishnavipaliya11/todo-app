@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <div className="todo-list-container">
         <Header />
+        <div>
         <TodoListForm
           todo={todo}
           setTodo={setTodo}
@@ -24,6 +25,8 @@ function App() {
           editTodo={editTodo}
           setEditTodo={setEditTodo}
         />
+        </div>
+      
       </div>
     </div>
   );

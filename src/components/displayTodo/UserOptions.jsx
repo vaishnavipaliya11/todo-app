@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { AiFillEdit, AiFillDelete } from "react-icons/ai";
+import { AiFillEdit, AiFillDelete, AiOutlineEdit } from "react-icons/ai";
+import {
+  IoCheckmarkDoneCircleOutline,
+  IoCheckmarkDoneCircle,
+} from "react-icons/io5";
 import { TiTick } from "react-icons/ti";
 const UserOption = ({
   data,
@@ -38,15 +42,19 @@ const UserOption = ({
           onChange={(e) => editInputHandler(e)}
           value={editInput}
           disabled={!isEditable}
+          className="user-options-input"
         />
-        <button onClick={() => editToDoHandler(data)}>
-          {/* <AiFillEdit /> */}
-          {isEditable ? "edit" : "start editing"}
+        <button onClick={() => editToDoHandler(data)} className="options-btn">
+          {isEditable ? <AiFillEdit /> : <AiOutlineEdit />}
         </button>
-        <button onClick={() => completeTodo(data)}>
-          <TiTick />
+        <button onClick={() => completeTodo(data)} className="options-btn" >
+          {data.isComplete ? (
+            <IoCheckmarkDoneCircle/>
+          ) : (
+            <IoCheckmarkDoneCircleOutline />
+          )}
         </button>
-        <button onClick={() => deleteTodo(data)}>
+        <button onClick={() => deleteTodo(data)} className="options-btn">
           <AiFillDelete />
         </button>
       </li>

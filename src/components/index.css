@@ -1,3 +1,4 @@
+/* form classes */
 .user-input{
     padding: 0.5em;
     font-size: 0.8rem;
@@ -5,8 +6,8 @@
     border: 1px solid blue;
     margin: 0.5rem;
 }
-.user-input::selection{
-    border: 1px solid blue;
+.user-input:focus{
+    outline: 2px solid var(--primary-clr);
 }
 .add-btn{
     background-color:var(--text-clr);
@@ -16,9 +17,39 @@
     border-radius: 5px;
     color: var(--primary-clr);
     border: 1px solid var(--primary-clr);
+    font-weight: 700;
 }
 .add-btn:hover{
     background-color:var(--primary-clr);
     color: var(--text-clr);
     cursor: pointer;
+}
+
+/* user options classes */
+.user-options-input{
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--primary-clr);
+}
+.user-options-input:focus{
+    outline: 1px solid var(--primary-clr);
+}
+li{
+    list-style: none;
+}
+.options-btn{
+    padding: 0.3rem;
+    margin: 0.3rem;
+    border-radius: 50%;
+    border: 1px solid #52525b;
+    font-size: 1rem;
+    color:#374151
+}
+.todo-form{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.todo-form input{
+    width: 14rem;
 }
